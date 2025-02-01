@@ -18,8 +18,9 @@ type DNSPacket struct {
 
 func main() {
 	domains := os.Args[1:]
+	// FIXME: This doesn't look correct
 	if len(domains) < 1 {
-		fmt.Println("Usage: ./dns <domain>")
+		fmt.Println("Usage: go run main.go <domain>")
 		os.Exit(0)
 	}
 
@@ -27,9 +28,6 @@ func main() {
 	for _, domain := range domains {
 		fmt.Println(resolve(domain, packet.TYPE_A))
 	}
-
-	// dnsResponse := resolve("www.google.com", packet.TYPE_A)
-	// fmt.Println(dnsResponse)
 }
 
 func resolve(domainName string, questionType uint16) string {

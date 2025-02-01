@@ -50,22 +50,6 @@ func (q *Question) ToBytes() []byte {
 	return buf.Bytes()
 }
 
-// func ParseMessageQuestion(message []byte, offset int) (*Question, int) {
-// 	var q Question
-// 	// message2 := response2[offset:]
-
-// 	domainName, bytesRead := DecodeDomainName(message, offset)
-// 	offset += bytesRead
-
-// 	q.QName = []byte(domainName)
-// 	q.QType = binary.BigEndian.Uint16(message[offset : offset+2])
-// 	q.QClass = binary.BigEndian.Uint16(message[offset+2 : offset+4])
-
-// 	bytesRead += 4
-
-// 	return &q, bytesRead
-// }
-
 func ParseMessageQuestion(fullMessage []byte, messageBytes []byte) (*Question, int) {
 	var (
 		q      Question
