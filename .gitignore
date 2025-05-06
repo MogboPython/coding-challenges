@@ -1,5 +1,10 @@
 dns_resolver/note.txt
 ccwc/dump.txt
-ccparse/
+ccparse/main_test.txt
 traceroute/traceroute
 traceroute/dump.txt
+ccparse/txxt.txt
+ccparse/ccparse
+ccparse/main_test.txt
+caching-proxy/helps.txt
+caching-proxy/caching-proxy
